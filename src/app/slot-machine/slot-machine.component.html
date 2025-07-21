@@ -1,0 +1,13 @@
+<div class="machine">
+  <h1>🎰 Slot Machine 🎰</h1>
+
+  <div class="reels">
+    <div class="reel" *ngFor="let symbol of reels">{{ symbol }}</div>
+  </div>
+
+  <div class="controls">
+    <button (click)="spin()" [disabled]="spinning || balance < spinCost">Spin (${{ spinCost }})</button>
+    <p>Balance: ${{ balance }}</p>
+    <p class="message">{{ message }}</p>
+  </div>
+</div>
